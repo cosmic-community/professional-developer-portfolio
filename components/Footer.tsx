@@ -1,3 +1,5 @@
+import { Github, Linkedin, Twitter } from 'lucide-react'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
   
@@ -45,25 +47,31 @@ export default function Footer() {
                 href="https://github.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary transition-colors"
+                className="text-gray-600 hover:text-primary transition-colors flex items-center gap-2"
+                aria-label="GitHub"
               >
-                GitHub
+                <Github className="w-5 h-5" />
+                <span>GitHub</span>
               </a>
               <a 
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary transition-colors"
+                className="text-gray-600 hover:text-primary transition-colors flex items-center gap-2"
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                <Linkedin className="w-5 h-5" />
+                <span>LinkedIn</span>
               </a>
               <a 
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary transition-colors"
+                className="text-gray-600 hover:text-primary transition-colors flex items-center gap-2"
+                aria-label="Twitter"
               >
-                Twitter
+                <Twitter className="w-5 h-5" />
+                <span>Twitter</span>
               </a>
             </div>
           </div>
