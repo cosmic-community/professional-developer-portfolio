@@ -63,16 +63,16 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
               </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary transition-colors flex items-center gap-2"
-                aria-label="Twitter"
-              >
-                  <X className="w-5 h-5" />
-                  <span>X</span>
-              </a>
+                <a 
+                  href="https://x.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary transition-colors flex items-center gap-2"
+                  aria-label="X (formerly Twitter)"
+                >
+                    <X className="w-5 h-5" />
+                    <span>X</span>
+                </a>
             </div>
           </div>
         </div>
