@@ -20,6 +20,7 @@ export default function ContactForm() {
   
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -30,6 +31,7 @@ export default function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
+    setErrorMessage('')
 
     try {
       const response = await fetch('/api/contact', {
@@ -40,14 +42,23 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       })
 
+      const data = await response.json()
+
       if (!response.ok) {
-        throw new Error('Failed to submit form')
+        // Set detailed error message for debugging
+        const errorDetails = data.details ? ` (${data.details})` : ''
+        const debugInfo = data.debugInfo ? `\n\nDebug info: ${data.debugInfo}` : ''
+        setErrorMessage(`${data.error || 'Failed to submit form'}${errorDetails}${debugInfo}`)
+        setSubmitStatus('error')
+        return
       }
 
       setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
       console.error('Error submitting form:', error)
+      const errorMsg = error instanceof Error ? error.message : 'Unknown error'
+      setErrorMessage(`Network error: ${errorMsg}`)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -130,7 +141,8 @@ export default function ContactForm() {
 
       {submitStatus === 'error' && (
         <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
-          Sorry, there was an error submitting your message. Please try again.
+          <p className="font-semibold mb-1">Error submitting form</p>
+          <p className="text-sm whitespace-pre-wrap">{errorMessage || 'Sorry, there was an error submitting your message. Please try again.'}</p>
         </div>
       )}
 
