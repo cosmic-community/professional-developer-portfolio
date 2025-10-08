@@ -4,6 +4,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class', // Changed: Added darkMode class strategy for theme toggle
   theme: {
     extend: {
       colors: {
