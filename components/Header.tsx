@@ -2,27 +2,27 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-900/60 transition-colors">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-primary">
+          <Link href="/" className="text-xl font-bold text-primary dark:text-primary">
             Portfolio
           </Link>
           
             <nav className="hidden md:flex items-center gap-6">
-              <Link href="#projects" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+              <Link href="#projects" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 Projects
               </Link>
-              <Link href="#skills" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+              <Link href="#skills" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 Skills
               </Link>
-              <Link href="#experience" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+              <Link href="#experience" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 Experience
               </Link>
-              <Link href="#testimonials" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+              <Link href="#testimonials" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 Testimonials
               </Link>
-              <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+              <Link href="/contact" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                 Contact
               </Link>
             </nav>
@@ -30,7 +30,7 @@ export default function Header() {
             <div className="flex items-center gap-4">
               <Link 
                 href="/contact" 
-                className="text-sm font-medium text-white bg-primary hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors"
+                className="text-sm font-medium text-white bg-primary hover:bg-primary-dark dark:bg-primary dark:hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors"
               >
                 Get in Touch
               </Link>

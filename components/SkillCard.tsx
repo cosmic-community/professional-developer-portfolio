@@ -24,11 +24,11 @@ export default function SkillCard({ skill }: SkillCardProps) {
   };
   
   return (
-    <div className="flex items-center justify-between p-4 bg-white border rounded-lg hover:shadow-md transition-shadow">
+    <div className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
       <div className="flex-1">
-        <h4 className="font-semibold text-gray-900">{skill.metadata?.skill_name || skill.title}</h4>
+        <h4 className="font-semibold text-gray-900 dark:text-white">{skill.metadata?.skill_name || skill.title}</h4>
         {yearsExperience && (
-          <p className="text-sm text-gray-600 mt-1">{yearsExperience} years experience</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{yearsExperience} years experience</p>
         )}
       </div>
       <span className={`px-3 py-1 text-xs font-medium rounded-full ${getProficiencyColor(proficiencyLevel)}`}>

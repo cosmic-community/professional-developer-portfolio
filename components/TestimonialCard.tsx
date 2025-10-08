@@ -30,14 +30,14 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   };
   
   return (
-    <article className="bg-white p-6 rounded-lg border shadow-sm hover:shadow-md transition-shadow">
+    <article className="bg-white dark:bg-gray-800 p-6 rounded-lg border dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
       {rating && (
         <div className="flex text-yellow-400 mb-4">
           {renderStars(rating.key)}
         </div>
       )}
       
-      <blockquote className="text-gray-700 mb-6">
+      <blockquote className="text-gray-700 dark:text-gray-300 mb-6">
         "{testimonial.metadata?.testimonial_text}"
       </blockquote>
       
@@ -52,11 +52,11 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
           />
         )}
         <div>
-          <p className="font-semibold text-gray-900">
+          <p className="font-semibold text-gray-900 dark:text-white">
             {testimonial.metadata?.client_name}
           </p>
           {testimonial.metadata?.client_title && (
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               {testimonial.metadata.client_title}
               {testimonial.metadata?.company && ` at ${testimonial.metadata.company}`}
             </p>

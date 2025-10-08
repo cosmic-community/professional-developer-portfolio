@@ -9,11 +9,11 @@ export default async function TestimonialsSection() {
   }
   
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Client Testimonials</h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Client Testimonials</h2>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
             What clients say about working with me
           </p>
         </div>
