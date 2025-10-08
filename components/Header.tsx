@@ -9,29 +9,32 @@ export default function Header() {
             Portfolio
           </Link>
           
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="#projects" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
-              Projects
-            </Link>
-            <Link href="#skills" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
-              Skills
-            </Link>
-            <Link href="#experience" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
-              Experience
-            </Link>
-            <Link href="#testimonials" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
-              Testimonials
-            </Link>
-          </nav>
+            <nav className="hidden md:flex items-center gap-6">
+              <Link href="#projects" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+                Projects
+              </Link>
+              <Link href="#skills" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+                Skills
+              </Link>
+              <Link href="#experience" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+                Experience
+              </Link>
+              <Link href="#testimonials" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+                Testimonials
+              </Link>
+              <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+                Contact
+              </Link>
+            </nav>
           
-          <div className="flex items-center gap-4">
-            <a 
-              href="mailto:contact@example.com" 
-              className="text-sm font-medium text-white bg-primary hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors"
-            >
-              Contact
-            </a>
-          </div>
+            <div className="flex items-center gap-4">
+              <Link 
+                href="/contact" 
+                className="text-sm font-medium text-white bg-primary hover:bg-primary-dark px-4 py-2 rounded-lg transition-colors"
+              >
+                Get in Touch
+              </Link>
+            </div>
         </div>
       </div>
     </header>

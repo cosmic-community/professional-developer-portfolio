@@ -14,31 +14,36 @@ export default function Footer() {
             </p>
           </div>
           
-          <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#projects" className="text-gray-600 hover:text-primary text-sm transition-colors">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#skills" className="text-gray-600 hover:text-primary text-sm transition-colors">
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href="#experience" className="text-gray-600 hover:text-primary text-sm transition-colors">
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="text-gray-600 hover:text-primary text-sm transition-colors">
-                  Testimonials
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#projects" className="text-gray-600 hover:text-primary text-sm transition-colors">
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a href="#skills" className="text-gray-600 hover:text-primary text-sm transition-colors">
+                    Skills
+                  </a>
+                </li>
+                <li>
+                  <a href="#experience" className="text-gray-600 hover:text-primary text-sm transition-colors">
+                    Experience
+                  </a>
+                </li>
+                <li>
+                  <a href="#testimonials" className="text-gray-600 hover:text-primary text-sm transition-colors">
+                    Testimonials
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="text-gray-600 hover:text-primary text-sm transition-colors">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
           
           <div>
             <h3 className="text-lg font-bold mb-4">Connect</h3>

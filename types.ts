@@ -100,3 +100,19 @@ export type ProjectStatus = 'completed' | 'in_progress' | 'maintenance';
 
 // Proficiency level types
 export type ProficiencyLevel = 'beginner' | 'intermediate' | 'advanced' | 'expert';
+
+// Contact Submission interface
+export interface ContactSubmission extends CosmicObject {
+  type: 'contact-submissions';
+  metadata: {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+    submission_date: string;
+    status?: {
+      key: string;
+      value: string;
+    };
+  };
+}
